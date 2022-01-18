@@ -7,18 +7,36 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <header>
+        <div class="header">
+            <a class="headerLink" href="/">Home</a>
+            <a class="headerLink" href="/beers">Beers</a>
+            <a class="headerLink"0px href="/random-beer">Random Beer</a>
+
+        </div>  
+    </header>
+
+    <div class="beersContainer">
         {{#each beersFromApi}}
-        <div>
-            <img src="{{this.image_url}}" alt="image of a beer">
-            <h2>{{this.name}}</h2>
-            <h4>{{this.tagline}}</h4>
-            <span>{{this.description}}</span>
+        <div class="tileContainer">
+            <div class="beerImgContainer">
+                <img class="beerImg" src="{{this.image_url}}" alt="image of a beer">
+            </div>
+            <div class="beerTextContainer">
+                <h2>{{this.name}}</h2>
+                <h4>{{this.tagline}}</h4>
+                <span class="beerDescription">{{this.description}}</span>
+            </div>
         </div>
 
         {{/each}}
     </div>
 
+    <footer>
+        <div class="footer">
+            <span class="footerText">Developed by Ironhack </span>
+        </div>
+    </footer>
     
 </body>
 </html>
